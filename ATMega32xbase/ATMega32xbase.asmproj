@@ -95,7 +95,19 @@
     <Compile Include="include\x16\x16sdop.inc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="include\x32base.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x64base.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x8base.inc">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="include\xbase.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\sdelay.asm">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="main.asm">
@@ -104,7 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="include" />
+    <Folder Include="include\x64" />
+    <Folder Include="include\x32" />
     <Folder Include="include\x16" />
+    <Folder Include="lib" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
 </Project>

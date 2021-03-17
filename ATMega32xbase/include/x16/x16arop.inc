@@ -33,7 +33,7 @@
 .macro dec16
 	
 	dec @0l
-	brpl pos	
+	brpl pos
 	dec @0h
 
 	pos:	

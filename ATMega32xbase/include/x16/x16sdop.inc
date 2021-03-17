@@ -28,16 +28,6 @@
 
 .endmacro
 
-
-	;	Loading 16bit number from SRAM
-.macro lds16
-
-	lds @0l, @1		; Loading of lower byte
-	lds @0h, @1 + 1	; Loading of higer byte
-
-.endmacro
-
-
 .macro st16
 	
 	st @0+, @1l	;Little-endian
@@ -60,6 +50,14 @@
 	st -@0, @1h
 	st -@0, @1l
 
+.endmacro
+
+
+.macro std16
+	
+	std @0, @1l 
+	std @0 + 1, @1h
+	 
 .endmacro
 
 
@@ -87,11 +85,11 @@
 
 .endmacro
 
+	;	Loading 16bit number from SRAM
+.macro lds16
 
-.macro mov16
-	
-	mov @0h, @1h
-	mov @0l, @1l
+	lds @0l, @1		; Loading of lower byte
+	lds @0h, @1 + 1	; Loading of higer byte
 
 .endmacro
 
@@ -113,11 +111,28 @@
 .endmacro
 
 
-.macro std16
+.macro mov16
 	
-	std @0, @1l 
-	std @0 + 1, @1h
-	 
+	mov @0h, @1h
+	mov @0l, @1l
+
 .endmacro
+
+
+.macro in16
+	
+	in @0h, @1h
+	in @0l, @1l
+
+.endmacro
+
+
+.macro out16
+	
+	out @0h, @1h
+	out @0l, @1l
+
+.endmacro
+
 
 #endif

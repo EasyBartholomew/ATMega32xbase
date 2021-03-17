@@ -1,0 +1,14 @@
+#ifndef	_X32BASE_INC_
+#define	_X32BASE_INC_
+
+.include "include/xbase.inc"
+
+
+.equ UINT64_MIN		=$0000000000000000
+.equ UINT64_MAX		=$FFFFFFFFFFFFFFFF
+					 
+.equ INT64_MIN		=$8000000000000000
+.equ INT64_MAX		=$7FFFFFFFFFFFFFFF
+
+
+#endif
