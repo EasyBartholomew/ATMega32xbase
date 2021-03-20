@@ -117,19 +117,28 @@
 //Do and check later
 .macro neg16
 	
-	neg @0l
+	com  @0h
+	neg  @0l
+	sbci @0h, $FF
+
+.endmacro
+
+
+.macro tst16
+
+	tst @0l, @1l
 	brne normal
 
-	neg @0h
+	tst @0h, @1h
 	rjmp end
 
 	normal:
-		neg @0h
+		tst @0h, @1h
 		clz
+	
 	end:
 
 .endmacro
 
-//Add tst
 
 #endif

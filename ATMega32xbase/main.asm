@@ -20,7 +20,7 @@ reset:
 	
 	ldi16 lx, RAMEND
 	out16 SP, lx
-	
+		
 	nop
 	nop	
 
