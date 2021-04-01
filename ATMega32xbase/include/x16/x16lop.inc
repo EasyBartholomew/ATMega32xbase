@@ -157,15 +157,15 @@
 	;	6 Cycles
 .macro tst16
 
-	tst @0l, @1l
+	tst @0l
 	brne normal
 	nop
 	
-	tst @0h, @1h
+	tst @0h
 	rjmp end
 
 	normal:
-		tst @0h, @1h
+		tst @0h
 		clz
 		nop
 	end:

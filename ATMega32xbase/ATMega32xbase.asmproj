@@ -98,6 +98,18 @@
     <Compile Include="include\x32base.inc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="include\x32\x32arop.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x32\x32cop.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x32\x32lop.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x32\x32sdop.inc">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="include\x64base.inc">
       <SubType>Code</SubType>
     </Compile>
