@@ -107,6 +107,12 @@
     <Compile Include="include\xbase.inc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\mem\flashbase.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\mem\membase.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="lib\sdelay.asm">
       <SubType>Code</SubType>
     </Compile>
@@ -120,6 +126,7 @@
     <Folder Include="include\x32" />
     <Folder Include="include\x16" />
     <Folder Include="lib" />
+    <Folder Include="lib\mem" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
 </Project>

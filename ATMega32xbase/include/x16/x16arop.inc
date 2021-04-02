@@ -42,6 +42,26 @@
 .endmacro 
 
 
+	;	Subtracts constant value from 16-bit virtual register
+	;	2 Cycles
+.macro subi16
+	
+	subi @0l, LOW(@1)
+	sbci @0h, HIGH(@1)
+	
+.endmacro
+
+
+	;	Subtracts constant value from 16-bit virtual register with carry
+	;	2 Cycles
+.macro sbci16
+	
+	sbci @0l, LOW(@1)
+	sbci @0h, HIGH(@1)
+
+.endmacro
+
+
 	;	Increments 16-bit virtual register
 	;	4 Cycles
 .macro inc16 

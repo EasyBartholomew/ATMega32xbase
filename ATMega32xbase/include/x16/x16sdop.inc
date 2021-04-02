@@ -113,9 +113,8 @@
 
 .macro mov16
 	
-	mov @0h, @1h
-	mov @0l, @1l
-
+	movw @0h:@0l, @1h:@1l 
+	
 .endmacro
 
 

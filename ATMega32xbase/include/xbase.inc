@@ -152,26 +152,4 @@
 #define MKNAME(prefix, postfix) prefix##postfix
 
 
-// Definition of independent word sized register
-#define tx tx
-
-
-// Definition of quadword sized virtual registers
-#define rx rx
-#define lx lx
-#define mx mx
-
-
-// Definition of double word sized virtual registers
-#define rxq MKNAME(rx, q)
-#define lxq MKNAME(lx, q)
-#define mxq	MKNAME(mx, q)
-
-
-// Definition of word sized virtual registers
-#define rxd MKNAME(rx, d)
-#define lxd MKNAME(lx, d)
-#define mxd MKNAME(mx, d)
-
-
 #endif
