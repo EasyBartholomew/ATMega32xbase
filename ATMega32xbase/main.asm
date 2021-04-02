@@ -6,6 +6,8 @@
 ;
 
 .include "include/x16base.inc"
+.include "include/x32base.inc"
+
 
 .equ DELAY		=100
 
@@ -18,14 +20,9 @@ num: .dw $F11F
 
 reset:
 	
-	ldi16 lx, RAMEND
-	out16 SP, lx
-		
-	nop
-	nop	
-
-	ldi16 lxqd, DELAY			
-	call sdelay_us
+	ldi32 lx, UINT32_MAX
+	
+	subi32 lx, 1
 		
 	loop:
 		rjmp loop

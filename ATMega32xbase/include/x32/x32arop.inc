@@ -31,9 +31,9 @@
 .macro sub32
 
 	sub @0l, @1l
-	sbc @0h, @0l
-	sbc @0dl, @1h
-	sbc @0dh, @0dl
+	sbc @0h, @1h
+	sbc @0dl, @1dl
+	sbc @0dh, @1dh
 
 .endmacro
 
@@ -43,9 +43,33 @@
 .macro sbc32
 	
 	sbc @0l, @1l
-	sbc @0h, @0l
-	sbc @0dl, @1h
-	sbc @0dh, @0dl
+	sbc @0h, @1h
+	sbc @0dl, @1dl
+	sbc @0dh, @1dh
+
+.endmacro 
+
+
+	;	Subtracts two 32-bit virtual registers
+	;	4 Cycles
+.macro subi32
+
+	subi @0l, LOW(@1)
+	sbci @0h, BYTE2(@1)
+	sbci @0dl, BYTE3(@1)
+	sbci @0dh, BYTE4(@1)
+
+.endmacro
+
+	
+	;	Subtracts two 32-bit virtual registers with carry
+	;	4 Cycles
+.macro sbci32
+	
+	sbci @0l, LOW(@1)
+	sbci @0h, BYTE2(@1)
+	sbci @0dl, BYTE3(@1)
+	sbci @0dh, BYTE4(@1)
 
 .endmacro 
 
