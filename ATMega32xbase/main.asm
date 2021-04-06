@@ -1,11 +1,8 @@
-;
 ; ATMega32base.asm
-;
-; Created: 06.03.2021 10:17:44 PM
-; Author : easyb
-;
 
+.include "include/x64base.inc"
 .include "include/x16base.inc"
+
 
 .equ DELAY		=100
 
@@ -21,8 +18,13 @@ reset:
 	ldi16 lx, RAMEND
 	out16 SP, lx
 		
+	add64 lx, lx
+	inc64 lx
+
 	nop
 	nop	
+
+
 
 	ldi16 lxqd, DELAY			
 	call sdelay_us

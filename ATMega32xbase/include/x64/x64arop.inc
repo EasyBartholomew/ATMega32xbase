@@ -83,7 +83,7 @@
 
 .endmacro
 
-.macro dec16
+.macro dec64
 	
 	dec @0l
 	brpl pos
@@ -105,5 +105,33 @@
 
 .endmacro
 
+.macro subi64
+
+	subi @0l, LOW(@1)
+	sbci @0h, BYTE2(@1)
+	sbci @0dl, BYTE3(@1)
+	sbci @0dh, BYTE4(@1)
+	sbci @0ql, BYTE5(@1)
+	sbci @0qh, BYTE6(@1)
+	sbci @0qdl, BYTE7(@1)
+	sbci @0qdh, BYTE8(@1)
+
+.endmacro
+
+.macro sbci64
+
+	sbci @0l, LOW(@1)
+	sbci @0h, BYTE2(@1)
+	sbci @0dl, BYTE3(@1)
+	sbci @0dh, BYTE4(@1)
+	sbci @0ql, BYTE5(@1)
+	sbci @0qh, BYTE6(@1)
+	sbci @0qdl, BYTE7(@1)
+	sbci @0qdh, BYTE8(@1)
+
+.endmacro
+
+
 
 #endif
+
