@@ -61,6 +61,9 @@
 	brne nq
 	nop
 
+	sez
+	rjmp eq
+
 	nq:
 		clz
 

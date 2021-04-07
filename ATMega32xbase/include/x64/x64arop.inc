@@ -76,8 +76,7 @@
 	inc @0qdl
 	brne normal
 	nop
-	inc @0qdh // Q: What to do if this byte will be overflowed? // 
-	// Maybe to ignore inc if lxqdh will be overflowed?
+	inc @0qdh
 	
 	normal:
 

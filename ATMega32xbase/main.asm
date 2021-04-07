@@ -17,9 +17,9 @@ reset:
 	
 	ldi16 lx, RAMEND
 	out16 SP, lx
-		
-	add64 lx, lx
-	inc64 lx
+	
+	ldi64 lx, 0x000000000000FFFF
+	lds64 lx, 0x0640
 
 	nop
 	nop	
