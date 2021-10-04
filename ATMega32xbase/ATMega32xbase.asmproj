@@ -113,6 +113,15 @@
     <Compile Include="include\x64base.inc">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="include\x64\x64arop.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x64\x64cop.inc">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="include\x64\x64sdop.inc">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="include\x8base.inc">
       <SubType>Code</SubType>
     </Compile>
