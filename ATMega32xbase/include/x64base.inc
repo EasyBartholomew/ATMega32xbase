@@ -1,7 +1,11 @@
-#ifndef	_X32BASE_INC_
-#define	_X32BASE_INC_
+#ifndef	_X64BASE_INC_
+#define	_X64BASE_INC_
 
 .include "include/xbase.inc"
+.include "include/xbase.inc"
+.include "include/x64/x64arop.inc"
+.include "include/x64/x64cop.inc"
+.include "include/x64/x64sdop.inc"
 
 
 .equ UINT64_MIN		=$0000000000000000

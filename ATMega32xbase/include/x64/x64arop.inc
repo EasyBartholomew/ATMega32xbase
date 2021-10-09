@@ -130,6 +130,26 @@
 
 .endmacro
 
+	;	Negates 32-bit virtual register
+	;	7 Cycles
+.macro neg64
+	
+	com  @0qdh
+	com  @0qdl
+	com  @0qh
+	com  @0ql
+	com  @0dh
+	com  @0dl
+	com  @0h
+	neg  @0l
+	sbci @0h, $FF
+	sbci @0dl, $FF
+	sbci @0dh, $FF
+	sbci @0ql, $FF
+	sbci @0qh, $FF
+	sbci @0qdl, $FF
+	sbci @0qdh, $FF
 
+.endmacro
 
 #endif

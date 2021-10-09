@@ -137,6 +137,12 @@
     <Compile Include="lib\sdelay.asm">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\x32mul.asm">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\x32trunc.asm">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="main.asm">
       <SubType>Code</SubType>
     </Compile>
