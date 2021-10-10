@@ -148,7 +148,7 @@
 .def lxqdh	=r25
 
 
-#define BYTE(VAL, N) ((VAL) >> (8 * (N)))
+#define BYTE(VAL, N) (((VAL) >> (8 * (N)) & $FF))
 
 #define BYTE0(VAL) BYTE(VAL, 0)
 #define BYTE1(VAL) BYTE(VAL, 1)
