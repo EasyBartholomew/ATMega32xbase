@@ -6,7 +6,7 @@
 .include "include/x64/x64arop.inc"
 .include "include/x64/x64cop.inc"
 .include "include/x64/x64sdop.inc"
-
+.include "include/x64/x64lop.inc"
 
 .equ UINT64_MIN		=$0000000000000000
 .equ UINT64_MAX		=$FFFFFFFFFFFFFFFF

@@ -148,6 +148,20 @@
 .def lxqdh	=r25
 
 
+#define BYTE(VAL, N) ((VAL) >> (8 * (N)))
+
+#define BYTE0(VAL) BYTE(VAL, 0)
+#define BYTE1(VAL) BYTE(VAL, 1)
+#define BYTE2(VAL) BYTE(VAL, 2)
+#define BYTE3(VAL) BYTE(VAL, 3)
+#define BYTE4(VAL) BYTE(VAL, 4)
+#define BYTE5(VAL) BYTE(VAL, 5)
+#define BYTE6(VAL) BYTE(VAL, 6)
+#define BYTE7(VAL) BYTE(VAL, 7)
+
+#define LWDWRD(VAL) ((VAL) & $00000000FFFFFFFF)
+#define HWDWRD(VAL) ((VAL) >> 32)
+
 // Makes (slimes) new name
 #define MKNAME(prefix, postfix) prefix##postfix
 

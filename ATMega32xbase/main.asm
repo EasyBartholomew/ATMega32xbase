@@ -23,11 +23,20 @@ reset:
 	ldi16 lx, RAMEND
 	out16 SP, lx
 
-	ldi32 lx, 5
-	ldi32 lxq, -10
+	ldi32 lx, 10
+	ldi32 lxq, 10
 			
-	call mul32s
-	call x32s_trunc
+	ldi64 lx, UINT64_MAX
+	//ldi64 lxq, (UINT64_MAX - (1 << 14))
+
+	sts64 $100, lx
+
+    andi64 lx, (1 << 62)
+	sts64 $100, lx
+
+	ori64 lx, (1 << 61)
+	sts64 $100, lx
+	//call mul32s_tr	
 	
 	sts32 $100, lxq
 				
@@ -38,4 +47,3 @@ reset:
 
 .include "lib/sdelay.asm"
 .include "lib/x32mul.asm"
-.include "lib/x32trunc.asm"

@@ -8,6 +8,14 @@
 	arg in lx (64bit)
 	result in lxq
 */
+x32u_trunc:	
+	mov32 lxq, lx
+	ret
+
+/*
+	arg in lx (64bit)
+	result in lxq
+*/
 x32s_trunc:
 		
 	in r16, SREG

@@ -3,14 +3,14 @@
 
 .macro ldi64
 
-	ldi @0l, LOW(@1)
-	ldi @0h, BYTE2(@1)
-	ldi @0dl, BYTE3(@1)
-	ldi @0dh, BYTE4(@1)
-	ldi @0ql, BYTE5(@1)
-	ldi @0qh, BYTE6(@1)
-	ldi @0qdl, BYTE7(@1)
-	ldi @0qdh, BYTE8(@1)
+	ldi @0l, BYTE0(@1)
+	ldi @0h, BYTE1(@1)
+	ldi @0dl, BYTE2(@1)
+	ldi @0dh, BYTE3(@1)
+	ldi @0ql, BYTE4(@1)
+	ldi @0qh, BYTE5(@1)
+	ldi @0qdl, BYTE6(@1)
+	ldi @0qdh, BYTE7(@1)
 
 .endmacro 
 
